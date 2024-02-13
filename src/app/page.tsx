@@ -1,10 +1,13 @@
 import JokeList from '@/components/entities/joke/joke-list';
 import SearchInput from '@/components/widgets/search-input';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
     <>
-      <SearchInput />
+      <Suspense>
+        <SearchInput />
+      </Suspense>
       <JokeList />
     </>
   );
